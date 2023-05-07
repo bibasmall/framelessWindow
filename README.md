@@ -1,0 +1,1 @@
+Qt frameless resizable window for Windows and Linux. Tested on Qt 6.3.2, Windows 10 and Debian 11. Minimise, maximise/restore, close buttons are also added. No ugly shaking when resizing and aero snap support on Windows.
