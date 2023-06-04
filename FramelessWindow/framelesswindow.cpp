@@ -1,4 +1,4 @@
-#include "framelessWindow.h"
+#include "framelesswindow.h"
 #include <QHBoxLayout>
 #include <QRect>
 
@@ -46,7 +46,7 @@ void FramelessWindow::SetupWindowCtrlButtons()
     menuWidgetLayout->addWidget(closeButton);
 }
 
-#ifdef Q_OS_WIN
+#if (defined (_WIN32) || defined (_WIN64))
 #include <windows.h>
 #include <WinUser.h>
 #include <windowsx.h>
@@ -187,7 +187,7 @@ bool FramelessWindow::nativeEvent(const QByteArray& eventType, void* message, qi
 }
 
 
-#elif Q_OS_UNIX
+#elif (defined (LINUX) || defined (__linux__))
 FramelessWindow::FramelessWindow(QWidget* parent) : QMainWindow(parent)
 {
     ui.setupUi(this);

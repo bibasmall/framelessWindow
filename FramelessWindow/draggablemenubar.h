@@ -10,7 +10,7 @@ public:
     explicit DraggableMenuBar(QWidget* parent = Q_NULLPTR);
     ~DraggableMenuBar() = default;
 
-#ifndef Q_OS_WIN
+#if (defined (LINUX) || defined (__linux__))
 signals:
     void DoubleClicked();
 

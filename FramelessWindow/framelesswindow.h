@@ -33,7 +33,7 @@ private:
     Ui::FramelessWindow ui;
     const quint8 dragBorderWidth = 5;
 
-#ifdef Q_OS_WIN
+#if (defined (_WIN32) || defined (_WIN64))
 public:
     bool nativeEvent(const QByteArray& eventType, void* message, qintptr* result) override;
 
@@ -44,7 +44,7 @@ private:
     bool justMaximized;
     HWND wndDescriptor;
 
-#elif Q_OS_UNIX
+#elif (defined (LINUX) || defined (__linux__))
 protected:
     virtual void CheckBorderDragging(QMouseEvent* event);
 

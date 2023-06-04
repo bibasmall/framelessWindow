@@ -351,3 +351,5 @@ MigrationBackup/
 *.recipe
 *.log
 *.log
+
+build/

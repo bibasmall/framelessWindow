@@ -54,7 +54,7 @@
   <customwidget>
    <class>DraggableMenuBar</class>
    <extends>QMenuBar</extends>
-   <header>draggableMenuBar.h</header>
+   <header>../../../FramelessWindow/draggablemenubar.h</header>
   </customwidget>
  </customwidgets>
  <resources>

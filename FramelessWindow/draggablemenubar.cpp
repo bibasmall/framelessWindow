@@ -1,4 +1,4 @@
-#include "draggableMenuBar.h"
+#include "draggablemenubar.h"
 #include <QMouseEvent>
 
 
@@ -7,7 +7,7 @@ DraggableMenuBar::DraggableMenuBar(QWidget* parent) : QMenuBar(parent)
 
 }
 
-#ifndef Q_OS_WIN
+#if (defined (LINUX) || defined (__linux__))
 void DraggableMenuBar::mousePressEvent(QMouseEvent* event)
 {
     if (actionAt(event->pos()))
